@@ -5,7 +5,7 @@ from config import bot
 
 def sql_create():
     global db, cursor
-    db = sqlite3.connect('bot.sqlite3')
+    db = sqlite3.connect('bot.sqlite')
     cursor = db.cursor()
 
     if db:

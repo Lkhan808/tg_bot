@@ -39,8 +39,8 @@ async def delete_data(message: types.Message):
         for user in users:
             await message.answer(f"id - {user[0]},\n"
             f"имя - {user[1]},\nнаправление - {user[2]},\nвозраст - {user[3]}, \n"
-            f"группа - {user[4]}")
-            reply_markup = InlineKeyboardMarkup.add(InlineKeyboardButton(f"Delete {user[1]}",callback_data=f"Delete{user[0]}"))
+            f"группа - {user[4]}",
+            reply_markup = InlineKeyboardMarkup.add(InlineKeyboardButton(f"Delete {user[1]}",callback_data=f"Delete{user[0]}")))
 
 
 async def complete_delete(call: types.CallbackQuery):
